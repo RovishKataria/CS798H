@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voters' Election Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #dee2e6;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+        }
+        .section-title {
+            color: #0d6efd;
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <nav class="navbar bg-light">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="Portallogo.svg" alt="Logo" height="45">
+                <span class="ms-3 fs-5 fw-bold">VOTERS' ELECTION PORTAL</span>
+            </a>
+            <div class="d-flex gap-3">
+                <button class="btn btn-outline-secondary">EN/HI</button>
+                <button class="btn btn-outline-primary">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Forms & Services & Voter Image -->
+        <div class="row g-5">
+            <!-- Forms Section -->
+            <div class="col-md-8">
+                <h2 class="section-title">FORMS</h2>
+                <div class="row g-4">
+                    <!-- Form Cards -->
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5>New Voter Registration</h5>
+                                <p>For citizens aged 18+ or turning 18 soon</p>
+                                <button class="btn btn-success">Fill Form</button>
+                                <a href="#" class="btn btn-link">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5>Name Delete</h5>
+                                <p>Update or correct name in electoral poll</p>
+                                <button class="btn btn-success">Fill Form</button>
+                                <a href="#" class="btn btn-link">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5>Details Update</h5>
+                                <pre>Change in personal details,
+residential address, etc in voter ID</pre>
+                                <button class="btn btn-success">Fill Form</button>
+                                <a href="#" class="btn btn-link">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5>Other Forms</h5>
+                                <pre>Forms related to overseas(NRI),
+E-EPIC, PwD, kashmir residents, etc</pre>
+                                <a href="#" class="btn btn-link">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Section -->
+                <h2 class="section-title mt-5">SERVICES</h2>
+                <div class="row g-4">
+                    <!-- Service Cards -->
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5>Complaints</h5>
+                                <p>File electoral/forms related complaints</p>
+                                <a href="#" class="btn btn-link">Access Service</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5>Track Application</h5>
+                                <pre>Check from/complaint status
+by reference no.</pre>
+                                <a href="#" class="btn btn-link">Track Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5>E-EPIC Download</h5>
+                                <p>Download digital voter ID</p>
+                                <a href="#" class="btn btn-link">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5>Polling Station Locator</h5>
+                                <p>Find your assigned voting booth</p>
+                                <a href="#" class="btn btn-link">Search Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voter Image -->
+            <div class="col-md-4">
+                <img src="latest_news.png" alt="Voter" class="img-fluid rounded" style="border: 1px solid black; margin-top: 45px; height: 370px;">
+                <img src="FAQ.png" alt="Voter" class="img-fluid rounded" style="border: 1px solid black; margin-top: 90px; height: 350px; width: 400px;">
+            </div>
+        </div>
+
+        <!-- Mobile Apps & Updates -->
+        <div class="row mt-5 g-4">
+            <!-- Mobile Apps -->
+            <div class="col-md-8">
+                <h2 class="section-title">MOBILE APPS</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="voterTurnoutAppIconNew.svg" alt="App" class="img-fluid mb-2" style="height: 60px">
+                                <h6>Voter Helpline</h6>
+                                <p class="small">Official voter services app</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="cVigilAppIconNew.svg" alt="App" class="img-fluid mb-2" style="height: 60px">
+                                <h6>cVIGIL</h6>
+                                <p class="small">Report electoral violations</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="SakshameciLogo.svg" alt="App" class="img-fluid mb-2" style="height: 60px">
+                                <h6>Saksham</h6>
+                                <p class="small">Polling officer portal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="voterTurnoutAppIconNew.svg" alt="App" class="img-fluid mb-2" style="height: 60px">
+                                <h6>Voter Turnout</h6>
+                                <p class="small">Citizen services portal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Updates -->
+            <div class="col-md-4">
+                <h2 class="section-title">ABOUT ECI</h2>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- <h6>Election Results 2024</h6> -->
+                        <p style="margin-bottom: 0px;">The Election Commission of India is an autonomous constitutional authority responsible for administering Union and
+                            State election processes in India. The body administers elections to the Lok Sabha,....</p>
+                        <!-- <button class="btn btn-primary w-100">Read More</button> -->
+                        <a href="#" class="btn btn-link">Read More</a>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <div class="card-body">
+                        <h6>Upcoming Elections</h6>
+                        <p>Schedule for state assembly elections</p>
+                        <button class="btn btn-outline-primary w-100">View Schedule</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="row text-center g-3">
+                <div class="col-md-3">
+                    <h6>Helpline</h6>
+                    <p>1950 (Toll-free)</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Address</h6>
+                    <p>Election Commission of India, New Delhi</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Email</h6>
+                    <p>help@eci.gov.in</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Follow Us</h6>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --text-color: #333;
+            --bg-color: #fff;
+            --border-color: #dee2e6;
+        }
+
+        .dark-mode {
+            --text-color: #fff;
+            --bg-color: #212529;
+            --border-color: #495057;
+        }
+
+        body {
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: 0.3s;
+        }
+
+        .navbar {
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--bg-color) !important;
+        }
+
+        .card {
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-color);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+        }
+
+        /* Improved Theme Switch */
+        .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .theme-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ddd;
+            border-radius: 24px;
+            transition: .4s;
+            display: flex;
+            align-items: center;
+            padding: 2px;
+        }
+
+        .slider::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #333;
+        }
+
+        input:checked + .slider::before {
+            transform: translateX(26px);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Adjust Mobile Apps Section */
+        .apps .card {
+            width: 100%;
+            max-width: 140px;
+            margin: auto;
+        }
+
+        /* Ensure Mobile Apps and Updates are Side by Side */
+        .apps-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .apps-container .updates {
+            flex: 1;
+        }
+
+        /* Contact Section Horizontal Alignment */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="Portallogo.svg" alt="Logo" height="45" class="me-2">
+                <span class="fs-5 fw-bold">VOTERS' SERVICE PORTAL</span>
+            </a>
+            
+            <div class="d-flex align-items-center gap-3">
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <button class="btn btn-outline-primary">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Apps & Updates Section -->
+    <div class="container my-5">
+        <div class="apps-container">
+            <!-- Mobile Apps -->
+            <div class="col-lg-8">
+                <h2 class="section-title">Mobile Apps</h2>
+                <div class="row g-3 apps">
+                    <div class="col-md-3"><div class="card text-center"><div class="card-body"><img src="VhaAppIconNew.svg" alt="App Icon" class="app-icon"><h6>Voter Helpline</h6></div></div></div>
+                    <div class="col-md-3"><div class="card text-center"><div class="card-body"><img src="SakshameciLogo.svg" alt="App Icon" class="app-icon"><h6>Saksham App</h6></div></div></div>
+                    <div class="col-md-3"><div class="card text-center"><div class="card-body"><img src="cVigilAppIconNew.svg" alt="App Icon" class="app-icon"><h6>cVIGIL</h6></div></div></div>
+                    <div class="col-md-3"><div class="card text-center"><div class="card-body"><img src="voterTurnoutAppIconNew.svg" alt="App Icon" class="app-icon"><h6>Voter Turnout</h6></div></
+                    <div class="col-lg-4 updates">
+                        <h2 class="section-title">Latest Updates</h2>
+                        <ul class="list-group">
+                            <li class="list-group-item">Update 1: Election dates announced.</li>
+                            <li class="list-group-item">Update 2: New voter registration guidelines.</li>
+                            <li class="list-group-item">Update 3: Voting centers information updated.</li>
+                            <li class="list-group-item">Update 4: EVM machine demo available online.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Contact Us Section -->
+            <div class="container my-5">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>+91 9876543210</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span>support@electionportal.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Election Commission Office, New Delhi</span>
+                    </div>
+                </div>
+            </div>
+        
+            <script>
+                // Dark Mode Toggle
+                const toggleSwitch = document.getElementById('theme-toggle');
+                toggleSwitch.addEventListener('change', () => {
+                    document.body.classList.toggle('dark-mode');
+                });
+            </script>
+        
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+        </html>
+        
