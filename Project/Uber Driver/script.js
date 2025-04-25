@@ -106,20 +106,32 @@ function renderRide() {
   const note = ride.priority ? `<p class="note">You are getting 25% more than usual</p>` : "";
 
   document.getElementById('rideCard').innerHTML = `
-    <div class="ride-header">
-      <div class="price">${ride.fare}</div>
-      ${badgeHTML}
+  <div class="ride-card-content">
+    <div class="ride-price">${ride.fare}</div>
+    <hr class="divider" />
+
+    <div class="ride-info">
+      <div class="info-row">
+        <span class="dot"></span>
+        <span class="info-text">${ride.time} away</span>
+      </div>
+      <p class="info-address">${ride.pickup}</p>
+
+      <div class="info-row">
+        <span class="dot bold"></span>
+        <span class="info-text">${ride.distance} trip</span>
+      </div>
+      <p class="info-address">Dropoff: ${ride.dropoff}</p>
     </div>
-    ${note}
-    <p class="location">${ride.time} away</p>
-    <p class="location">Pickup: ${ride.pickup}</p>
-    <p class="location">${ride.distance} trip</p>
-    <p class="location">Dropoff: ${ride.dropoff}</p>
+
     <div class="buttons">
       <button class="accept" onclick="acceptRide()">Accept</button>
       <button class="decline" onclick="declineRide()">Decline</button>
     </div>
-  `;
+
+    ${badgeHTML}
+  </div>
+`;
 }
 
 function acceptRide() {
